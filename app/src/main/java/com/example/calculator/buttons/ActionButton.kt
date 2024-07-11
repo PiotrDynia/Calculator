@@ -18,7 +18,7 @@ import com.example.calculator.R
 
 @Composable
 fun ActionButton(
-    text: String,
+    @StringRes text: Int,
     onClick: () -> Unit,
     modifier: Modifier = Modifier
 ) {
@@ -36,7 +36,7 @@ fun ActionButton(
         colors = ButtonDefaults.buttonColors(containerColor = backgroundColor)
     ) {
         Text(
-            text = text,
+            text = stringResource(text),
             color = textColor
         )
     }
@@ -45,7 +45,7 @@ fun ActionButton(
 @Preview(showBackground = true)
 @Composable
 fun ActionButtonPreview() {
-    ActionButton(text = stringResource(R.string.plus),
+    ActionButton(text = R.string.plus,
         onClick = { }
     )
 }
