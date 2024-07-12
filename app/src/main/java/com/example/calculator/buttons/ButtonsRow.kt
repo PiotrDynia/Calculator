@@ -14,43 +14,11 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.calculator.R
 import com.example.calculator.utils.Operation
-
-@Composable
-fun ButtonRow(
-    buttons: List<@Composable () -> Unit>,
-    modifier: Modifier = Modifier
-) {
-    Row(
-        modifier = modifier.padding(4.dp),
-        horizontalArrangement = Arrangement.spacedBy(8.dp)
-    ) {
-        buttons.forEach { it() }
-    }
-}
-
-@Composable
-fun GenerateButton(buttonData: ButtonData, isHighlighted: Boolean) {
-    if (buttonData.isActionButton) {
-        ActionButton(
-            text = buttonData.text,
-            onClick = buttonData.onClick,
-            isHighlighted = isHighlighted
-        )
-    } else {
-        InputButton(
-            text = buttonData.text,
-            onClick = buttonData.onClick,
-            textColor = buttonData.textColor,
-            backgroundColor = buttonData.backgroundColor
-        )
-    }
-}
 
 @Composable
 fun ButtonsContent(modifier: Modifier = Modifier) {
@@ -290,6 +258,37 @@ fun formatNumber(number: Double): String {
         number.toLong().toString()
     } else {
         number.toString()
+    }
+}
+
+@Composable
+fun ButtonRow(
+    buttons: List<@Composable () -> Unit>,
+    modifier: Modifier = Modifier
+) {
+    Row(
+        modifier = modifier.padding(4.dp),
+        horizontalArrangement = Arrangement.spacedBy(8.dp)
+    ) {
+        buttons.forEach { it() }
+    }
+}
+
+@Composable
+fun GenerateButton(buttonData: ButtonData, isHighlighted: Boolean) {
+    if (buttonData.isActionButton) {
+        ActionButton(
+            text = buttonData.text,
+            onClick = buttonData.onClick,
+            isHighlighted = isHighlighted
+        )
+    } else {
+        InputButton(
+            text = buttonData.text,
+            onClick = buttonData.onClick,
+            textColor = buttonData.textColor,
+            backgroundColor = buttonData.backgroundColor
+        )
     }
 }
 

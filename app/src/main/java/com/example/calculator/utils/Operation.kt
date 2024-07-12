@@ -24,14 +24,4 @@ sealed class Operation(@StringRes val nameRes: Int) {
             return a / b
         }
     }
-
-    data object Equals : Operation(R.string.equals) {
-        override fun apply(a: Double, b: Double): Double {
-            throw UnsupportedOperationException("Equals operation doesn't apply on two operands")
-        }
-
-        fun apply(a: Double): Double {
-            return a
-        }
-    }
 }
