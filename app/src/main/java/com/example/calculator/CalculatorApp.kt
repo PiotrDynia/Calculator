@@ -19,17 +19,8 @@ import com.example.calculator.buttons.ButtonsContent
 
 @Composable
 fun Calculator(modifier: Modifier = Modifier) {
-    var input by remember {
-        mutableStateOf("0")
-    }
     Column {
         Spacer(modifier = modifier.size(104.dp))
-        Text(
-            text = input,
-            fontSize = 80.sp,
-            color = Color.White,
-            modifier = Modifier.align(Alignment.End)
-            )
         ButtonsContent() 
     }
 }

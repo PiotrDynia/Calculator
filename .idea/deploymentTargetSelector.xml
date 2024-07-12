@@ -17,7 +17,7 @@
       <SelectionState runConfigName="inputButtonTest_isButtonClickable()">
         <option name="selectionMode" value="DROPDOWN" />
       </SelectionState>
-      <SelectionState runConfigName="actionButtonTest_isButtonClickable()">
+      <SelectionState runConfigName="AppPreview">
         <option name="selectionMode" value="DROPDOWN" />
       </SelectionState>
     </selectionStates>
