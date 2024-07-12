@@ -29,9 +29,9 @@ fun InputButton(
 ) {
     val isZero = stringResource(text) == "0"
     val buttonModifier = if (isZero) {
-        modifier.size(width = 152.dp, height = 72.dp)
+        modifier.size(width = 180.dp, height = 86.dp)
     } else {
-        modifier.size(72.dp)
+        modifier.size(86.dp)
     }
 
     Button(

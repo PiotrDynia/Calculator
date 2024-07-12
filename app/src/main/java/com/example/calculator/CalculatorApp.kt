@@ -1,7 +1,9 @@
 package com.example.calculator
 
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.size
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -19,9 +21,13 @@ import com.example.calculator.buttons.ButtonsContent
 
 @Composable
 fun Calculator(modifier: Modifier = Modifier) {
-    Column {
-        Spacer(modifier = modifier.size(104.dp))
-        ButtonsContent() 
+    Column(
+        modifier = modifier.fillMaxSize(),
+        verticalArrangement = Arrangement.Bottom,
+        horizontalAlignment = Alignment.CenterHorizontally
+    ) {
+        Spacer(modifier = Modifier.weight(1f))
+        ButtonsContent()
     }
 }
 
