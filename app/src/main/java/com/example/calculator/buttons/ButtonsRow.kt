@@ -1,4 +1,4 @@
-package com.example.calculator
+package com.example.calculator.buttons
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -9,9 +9,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.example.calculator.buttons.ActionButton
-import com.example.calculator.buttons.ButtonData
-import com.example.calculator.buttons.InputButton
+import com.example.calculator.R
 
 @Composable
 fun ButtonRow(
@@ -86,6 +84,6 @@ fun ButtonsContent(modifier: Modifier = Modifier) {
 
 @Preview(showBackground = true)
 @Composable
-fun ButtonsPreview(modifier: Modifier = Modifier) {
+fun ButtonsPreview() {
     ButtonsContent()
 }
