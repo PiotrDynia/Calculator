@@ -5,6 +5,7 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Surface
@@ -22,7 +23,8 @@ class MainActivity : ComponentActivity() {
         setContent {
             CalculatorTheme {
                 Surface(
-                    color = Color.Black
+                    color = Color.Black,
+                    modifier = Modifier.fillMaxSize()
                 ) {
                     Calculator()
                 }
@@ -37,7 +39,8 @@ class MainActivity : ComponentActivity() {
 fun AppPreview() {
     CalculatorTheme {
         Surface(
-            color = Color.Black
+            color = Color.Black,
+            modifier = Modifier.fillMaxSize()
         ) {
             Calculator()
         }

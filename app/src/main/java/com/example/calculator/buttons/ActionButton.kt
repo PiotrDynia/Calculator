@@ -25,18 +25,15 @@ import com.example.calculator.R
 fun ActionButton(
     @StringRes text: Int,
     onClick: () -> Unit,
+    isHighlighted: Boolean,
     modifier: Modifier = Modifier
 ) {
-    var isHighlighted by remember { mutableStateOf(false) }
     val backgroundColor = if (isHighlighted) Color.White else Color(0xFFFFA500)
     val textColor = if (isHighlighted) Color(0xFFFFA500) else Color.White
 
     Button(
-        onClick = {
-            isHighlighted = !isHighlighted
-            onClick()
-        },
-        modifier = modifier.size(72.dp),
+        onClick = { onClick() },
+        modifier = modifier.size(86.dp),
         shape = CircleShape,
         colors = ButtonDefaults.buttonColors(containerColor = backgroundColor)
     ) {
@@ -54,6 +51,7 @@ fun ActionButton(
 @Composable
 fun ActionButtonPreview() {
     ActionButton(text = R.string.plus,
-        onClick = { }
+        onClick = { },
+        isHighlighted = false
     )
 }
